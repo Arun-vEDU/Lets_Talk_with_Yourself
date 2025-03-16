@@ -11,10 +11,12 @@
         "question": "How old is Arunya?",
         "answer": "Arunya P. Senadeera is 30 years old."
     },
+    
     {
         "question": "What is your highest level of education?",
         "answer": "Your highest level of education is Doctoral Student , Data Science & Artificial Intelligence"
     },
+    
     {
         "question": "What major or field of study did you pursue during your education?",
         "answer": "Electronics and Computer Science"
