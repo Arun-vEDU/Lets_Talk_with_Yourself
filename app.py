@@ -8,6 +8,7 @@ from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
+from langchain import PromptTemplate
 import fitz  # PyMuPDF
 from unstructured.partition.md import partition_md
 
@@ -45,6 +46,18 @@ with open("saved_pipeline_googleT5.pkl", "rb") as f:
 
 llm = HuggingFacePipeline(pipeline=pipe)
 
+# --------------------- Prompt Template Setup ---------------------
+personal_prompt_template = """
+I'm your friendly AI assistant, here to provide information about my background, education, work experience, and beliefs. 
+Feel free to ask me any questions about myself, and I'll do my best to provide accurate and helpful answers.
+
+Context: {context}
+Question: {question}
+Answer:
+""".strip()
+
+PERSONAL_PROMPT = PromptTemplate.from_template(template=personal_prompt_template)
+
 # --------------------- Memory Setup ---------------------
 memory = ConversationBufferMemory(
     memory_key="chat_history",
@@ -67,7 +80,7 @@ app = Dash(__name__)
 
 app.layout = html.Div([
     html.H1("Chat with Arunya's Personal Chatbot"),
-    dcc.Input(id="input-text", type="text", placeholder="Ask me anything...", 
+    dcc.Input(id="input-text", type="text", placeholder="Ask about Arunya...", 
              style={"width": "80%", "padding": "10px"}),
     html.Button("Ask", id="submit-button", n_clicks=0,
                style={"marginLeft": "10px", "padding": "10px 20px"}),
@@ -94,7 +107,15 @@ app.layout = html.Div([
 def update_output(n_clicks, question):
     if n_clicks > 0 and question:
         try:
-            response = chain({"question": question.strip()})
+            # Retrieve context from the vector store
+            docs = vector_store.similarity_search(question, k=3)
+            context = "\n".join([doc.page_content for doc in docs])
+            
+            # Format the prompt using the template
+            formatted_prompt = PERSONAL_PROMPT.format(context=context, question=question)
+            
+            # Get the response from the chain
+            response = chain({"question": formatted_prompt})
             answer = response.get("answer", "I couldn't find an answer.")
             sources = [
                 html.Div([
@@ -107,7 +128,7 @@ def update_output(n_clicks, question):
             return answer, sources
         except Exception as e:
             return f"Error: {str(e)}", ""
-    return "Ask me anything about your documents!", ""
+    return "Summary of related articles and documents ", ""
 
 if __name__ == "__main__":
     app.run_server(debug=True, port=8050)
