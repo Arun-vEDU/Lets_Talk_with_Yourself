@@ -14,9 +14,8 @@ I'm your friendly AI assistant, here to provide information about my background,
 List of Retriever and Generator Models
 
 Retriever Model
-Model Name: sentence-transformers/all-MiniLM-L6-v2
-
-This retrieve the top k (e.g., 3) most relevant document chunks from the vector store.
+*Model Name: sentence-transformers/all-MiniLM-L6-v2 .
+(This retrieve the top (k=3) most relevant document chunks from the vector store.)
 
 Generator Models
 
@@ -24,15 +23,13 @@ I have used two generator models:
 
 Model 1:
 
-Model Name: fastchat-t5-3b-v1.0
-
-Tokenizer: google/flan-t5-large
+*Model Name: fastchat-t5-3b-v1.0
+*Tokenizer: google/flan-t5-large
 
 Model 2:
 
-Model Name: google/flan-t5-large
-
-Tokenizer: google/flan-t5-large
+*Model Name: google/flan-t5-large
+*Tokenizer: google/flan-t5-large
 
 
 # Results
