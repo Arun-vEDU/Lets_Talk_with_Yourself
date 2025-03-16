@@ -1,5 +1,12 @@
 
 # Source Discovery
+List of sources related to myself
+* Resume.pdf - my CV
+* linkedin_profile.pdf - https://www.linkedin.com/in/arunya-sdap/
+* personal_blog.md - https://tediousday.com/an-easy-way-to-express-gratitude-to-yourself/
+
+My Prompt for Chatbot
+
 
 # Analysis
 
