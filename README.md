@@ -1,10 +1,26 @@
 
 # Source Discovery
+List of sources related to myself
+* Resume.pdf - my CV
+* linkedin_profile.pdf - https://www.linkedin.com/in/arunya-sdap/
+* personal_blog.md - https://tediousday.com/an-easy-way-to-express-gratitude-to-yourself/
+
+My Prompt for Chatbot
+
+I'm your friendly AI assistant, here to provide information about my background, education, work experience, and beliefs. Feel free to ask me any questions about myself, and I'll do my best to provide accurate and helpful answers.
 
 # Analysis
 
 
 # Results
+
+Note :
+
+*used; model = fastchat-t5-3b-v1.0 and Tokernizr = google/flan-t5-large to genarate the output
+  
+**used ; model = google/flan-t5-large and Tokernizr = google/flan-t5-large to genarate the output
+
+Results on question-answer pairs*
 
 [
 
@@ -51,3 +67,7 @@
         "answer": "I hope to achieve academic excellence and to contribute to the field of Assistive Robotics and IoT by identifying and addressing gaps in practical research applications and by leveraging these technologies to create a meaningful impact on society and enhance the quality of life for people."
     }
 ]
+
+Demostration**
+
+[![YouTube Video](https://img.youtube.com/vi/BnyO_r7Phhk/0.jpg)](https://www.youtube.com/watch?v=BnyO_r7Phhk)
