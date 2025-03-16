@@ -29,7 +29,7 @@ Improve Retriever Model:
 
 Generator Models
 
-I experimented with two generator models for this task. Initially, I attempted to use the fastchat-t5-3b-v1.0 model with its corresponding tokenizer, but due to resource limitations on my laptop, the model failed to run. To address this, I switched to using the fastchat-t5-3b-v1.0 model with the google/flan-t5-large tokenizer, which allowed me to generate question-answer pairs successfully. However, during the inference phase in the Dash application, my laptop crashed again due to system limitations (a screenshot of the error is provided in Figure 1). To resolve this issue, I transitioned to using both the model and tokenizer from google/flan-t5-large, which proved to be more resource-efficient and stable for my setup.
+I experimented with two generator models for this task. Initially, I attempted to use the fastchat-t5-3b-v1.0 model with its corresponding tokenizer, but due to resource limitations on my laptop, the model failed to run. To address this, I switched to using the fastchat-t5-3b-v1.0 model with the google/flan-t5-large tokenizer, which allowed me to successfully generate question-answer pairs. However, during the inference phase in the Dash application, my laptop crashed again due to system limitations (a screenshot of the error is provided in Figure 1). To resolve this issue, I transitioned to using both the model and tokenizer from google/flan-t5-large, which proved to be more resource-efficient and stable for my setup. While this configuration worked for the demonstration video, the results were not entirely satisfactory in terms of accuracy and relevance.
 
 ![Resource limitation error](error.png)
 *Figure 1: Resource limitation.*
@@ -110,6 +110,6 @@ Results on question-answer pairs*
     }
 ]
 
-Demostration**
+Demonstration**
 
 [![YouTube Video](https://img.youtube.com/vi/BnyO_r7Phhk/0.jpg)](https://www.youtube.com/watch?v=BnyO_r7Phhk)
