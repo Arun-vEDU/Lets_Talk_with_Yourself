@@ -51,3 +51,7 @@
         "answer": "I hope to achieve academic excellence and to contribute to the field of Assistive Robotics and IoT by identifying and addressing gaps in practical research applications and by leveraging these technologies to create a meaningful impact on society and enhance the quality of life for people."
     }
 ]
+
+Demostration**
+
+[![YouTube Video](https://img.youtube.com/vi/BnyO_r7Phhk/0.jpg)](https://www.youtube.com/watch?v=BnyO_r7Phhk)
