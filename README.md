@@ -29,7 +29,7 @@ Improve Retriever Model:
 
 Generator Models
 
-I have used two generator models:
+I have experiment with two generator models. I used as it can not model fastchat-t5-3b-v1.0 with Tokenizer fastchat-t5-3b-v1.0, can not run in my Laptop due to resource limitaion. Thus, I used Model Name: fastchat-t5-3b-v1.0, Tokenizer: google/flan-t5-large to make the queastion and answer pair. But during the dash appliaction inferance, I my laptop crash again (I have caption of the error in Figure 1) with system limitaion. I navigated this issue with bothe Model and Tokenizer : google/flan-t5-large. 
 
 Model 1:
 
@@ -41,7 +41,14 @@ Model 2:
 * Model Name: google/flan-t5-large
 * Tokenizer: google/flan-t5-large
 
+Generator Model Issues: 
+* Unrelated Answers: Even with relevant context, the generator model produce unrelated answers due to hallucinat and when the retrieved context is too long, the model try truncate it, leading to incomplete or irrelevant answers.
 
+Improve Generator Model:
+
+* Fine-tune the generator model on domain-specific data.
+* Split the context into smaller chunks.
+* Add post-processing to filter out irrelevant and hallucinated answers.
 
 # Results
 
