@@ -31,6 +31,15 @@ Model 2:
 * Model Name: google/flan-t5-large
 * Tokenizer: google/flan-t5-large
 
+Retriever Model Issues:
+
+* Unrelated Context: the retriever model retrieves irrelevant document chunks, the generator model produce unrelated or incorrect answers caused by poorly formatted PDFs and markdown files.
+  
+Improve Retriever Model:
+
+* Use a more advanced embedding model (e.g., all-mpnet-base-v2).
+* Preprocess documents to remove noise and improve chunk quality.
+* Experiment with different chunk sizes. 
 
 # Results
 
