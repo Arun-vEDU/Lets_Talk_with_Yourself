@@ -7,6 +7,7 @@ List of sources related to myself
 
 My Prompt for Chatbot
 
+I'm your friendly AI assistant, here to provide information about my background, education, work experience, and beliefs. Feel free to ask me any questions about myself, and I'll do my best to provide accurate and helpful answers.
 
 # Analysis
 
