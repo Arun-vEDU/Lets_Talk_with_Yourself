@@ -12,7 +12,7 @@ Note :
   
 **used ; model = google/flan-t5-large and Tokernizr = google/flan-t5-large to genarate the output
 
-question-answer pairs*
+Results on question-answer pairs*
 
 [
 
