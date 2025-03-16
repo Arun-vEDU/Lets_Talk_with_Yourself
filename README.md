@@ -7,9 +7,9 @@
 # Results
 
 Note :
-* used; model = fastchat-t5-3b-v1.0 and Tokernizr = google/flan-t5-large to genarate the output
+*used; model = fastchat-t5-3b-v1.0 and Tokernizr = google/flan-t5-large to genarate the output
   
-** used ; model = google/flan-t5-large and Tokernizr = google/flan-t5-large to genarate the output
+**used ; model = google/flan-t5-large and Tokernizr = google/flan-t5-large to genarate the output
 
 question-answer pairs*
 
