@@ -31,7 +31,7 @@ Generator Models
 
 I experimented with two generator models for this task. Initially, I attempted to use the fastchat-t5-3b-v1.0 model with its corresponding tokenizer, but due to resource limitations on my laptop, the model failed to run. To address this, I switched to using the fastchat-t5-3b-v1.0 model with the google/flan-t5-large tokenizer, which allowed me to generate question-answer pairs successfully. However, during the inference phase in the Dash application, my laptop crashed again due to system limitations (a screenshot of the error is provided in Figure 1). To resolve this issue, I transitioned to using both the model and tokenizer from google/flan-t5-large, which proved to be more resource-efficient and stable for my setup.
 
-![Example Image](error.png)
+![Resource limitation error](error.png)
 
 *Figure 1: Resource limitation.*
 
