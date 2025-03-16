@@ -11,6 +11,49 @@ I'm your friendly AI assistant, here to provide information about my background,
 
 # Analysis
 
+List of Retriever and Generator Models
+
+Retriever Model
+* Model Name: sentence-transformers/all-MiniLM-L6-v2 .
+(This retrieve the top (k=3) most relevant document chunks from the vector store.)
+
+Retriever Model Issues:
+
+* Unrelated Context: the retriever model retrieves irrelevant document chunks, the generator model produce unrelated or incorrect answers caused by poorly formatted PDFs and markdown files.
+  
+Improve Retriever Model:
+
+* Use a more advanced embedding model (e.g., all-mpnet-base-v2).
+* Preprocess documents to remove noise and improve chunk quality.
+* Experiment with different chunk sizes.
+
+Generator Models
+
+I experimented with two generator models for this task. Initially, I attempted to use the fastchat-t5-3b-v1.0 model with its corresponding tokenizer, but due to resource limitations on my laptop, the model failed to run. To address this, I switched to using the fastchat-t5-3b-v1.0 model with the google/flan-t5-large tokenizer, which allowed me to generate question-answer pairs successfully. However, during the inference phase in the Dash application, my laptop crashed again due to system limitations (a screenshot of the error is provided in Figure 1). To resolve this issue, I transitioned to using both the model and tokenizer from google/flan-t5-large, which proved to be more resource-efficient and stable for my setup.
+
+![Example Image](error.png)
+
+*Figure 1: Resource limitation.*
+
+
+Model 1:
+
+* Model Name: fastchat-t5-3b-v1.0
+* Tokenizer: google/flan-t5-large
+
+Model 2:
+
+* Model Name: google/flan-t5-large
+* Tokenizer: google/flan-t5-large
+
+Generator Model Issues: 
+* Unrelated Answers: Even with relevant context, the generator model produce unrelated answers due to hallucinat and when the retrieved context is too long, the model try truncate it, leading to incomplete or irrelevant answers.
+
+Improve Generator Model:
+
+* Fine-tune the generator model on domain-specific data.
+* Split the context into smaller chunks.
+* Add post-processing to filter out irrelevant and hallucinated answers.
 
 # Results
 
